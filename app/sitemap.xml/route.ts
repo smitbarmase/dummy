@@ -1,9 +1,9 @@
 export async function GET() {
-  // const url = "http://worldtimeapi.org/api/timezone/Asia/Kolkata";
-  // const res = await fetch(url, {
-  //   next: { revalidate: 120 },
-  // });
-  // const data = await res.json();
+  const url = "https://timeapi.io/api/Time/current/zone?timeZone=Asia/Kolkata";
+  const res = await fetch(url, {
+    next: { revalidate: 120 },
+  });
+  const data = await res.json();
 
-  return new Response("dsff");
+  return new Response(data.dateTime);
 }
