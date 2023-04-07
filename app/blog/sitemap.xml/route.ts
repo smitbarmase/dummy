@@ -1,4 +1,4 @@
-export async function GET(request: Request) {
+export async function GET() {
   const url = "http://worldtimeapi.org/api/timezone/Asia/Kolkata";
   const res = await fetch(url, {
     next: { revalidate: 60 },
