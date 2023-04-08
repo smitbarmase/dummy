@@ -1,7 +1,8 @@
 export async function GET() {
-  const url = "https://71be-103-214-63-146.ngrok-free.app";
-  const res = await fetch(url, { next: { revalidate: 60 } });
-  console.log("nice");
+  console.log("sitemap called");
+  const res = await fetch("https://dummy-orcin.vercel.app/api", {
+    next: { revalidate: 60 },
+  });
   return new Response(res.body);
 }
 
